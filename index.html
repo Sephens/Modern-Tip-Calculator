@@ -15,8 +15,10 @@
       <main>
         <div class="bill-calc">
           <div>
+            <div>
             <label>Bill</label>
-            <span class="input-error"></span>
+          </div>
+            <span class="bill-error"></span>
             <input type="number" placeholder="0" id="bill" class="input bill" />
           </div>
 
@@ -24,19 +26,19 @@
             <label>Select Tip %</label>
             <div class="options">
               <select name="" id="select-options">
-                <option value="">25%</option>
-                <option value="">20%</option>
-                <option value="">15%</option>
-                <option value="">10%</option>
-                <option value="">5%</option>
-                <input type="number" class="custom" placeholder="Custom" />
+                <option value="" class="twenty-five">25%</option>
+                <option value="" class="twenty">20%</option>
+                <option value="" class="fifteen">15%</option>
+                <option value="" class="ten">10%</option>
+                <option value="" class="five">5%</option>
+                <input type="number" class="custom" placeholder="Custom">
               </select>
             </div>
           </div>
 
           <div class="tip-people">
             <label>Number of People</label>
-            <span class="input-error"></span>
+            <span class="people-error"></span>
             <input
               type="number"
               class="input people-amount"
@@ -48,8 +50,8 @@
 
         <div class="tip-result">
           <div>
-            <div class="tip-amount">
-              <div class="tip-amount-person">
+            <div class="amount-show">
+              <div>
                 <p class="label-bill">Tip Amount</p>
                 <small class="person">/ person</small>
               </div>
@@ -60,7 +62,7 @@
               </div>
             </div>
 
-            <div class="tip-total">
+            <div class="amount-show">
               <div>
                 <p class="label-bill">Total</p>
                 <small class="person">/ person</small>
@@ -70,7 +72,7 @@
               </div>
             </div>
           </div>
-          <div class="reset">
+          <div>
             <button id="reset">Reset</button>
           </div>
         </div>
