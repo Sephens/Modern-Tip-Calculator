@@ -1,19 +1,16 @@
-"use strict";
-
 const resetBtn = document.getElementById("reset");
 const inputPeople = document.getElementById("people");
+const billSpan = document.getElementById("bill-error");
 const inputBill = document.getElementById("bill");
-const billError = document.querySelector(".bill-error");
-const peopleError = document.querySelector(".people-error");
+const peopleSpan = document.querySelector(".people-error");
 const tipAmount = document.querySelector(".tip-amount");
 const tipTotal = document.querySelector(".tip-total");
-const custom = document.querySelector(".custom");
-const twentyFive = document.querySelector(".twenty-five");
-const twenty = document.querySelector(".twenty");
-const fifteen = document.querySelector(".fifteen");
-const ten = document.querySelector(".ten");
 const five = document.querySelector(".five");
-
+const ten = document.querySelector(".ten");
+const fifteen = document.querySelector(".fifteen");
+const twenty = document.querySelector(".twenty");
+const twentyFive = document.querySelector(".twenty-five");
+const custom = document.querySelector(".custom");
 const format = (num, decimals) =>
 num.toLocaleString("en-US", {
     minimumFractionDigits: 2,
@@ -75,22 +72,22 @@ function calculate(number, percent){
 
 function peopleError(){
     if(inputPeople.value <= 0){
-        peopleError.innerHTML = "Cannot be zero";
+        peopleSpan.innerHTML = "Cannot be zero";
         inputPeople.style.border = "1.5px solid red";
     }
     else{
-        peopleError.innerHTML = "";
+        peopleSpan.innerHTML = "";
         inputPeople.style.border = "1.5px solid green";
     }
 }
 
 function billError(){
     if(inputBill.value <= 0){
-        billError.innerHTML = "Cannot be zero";
+        billSpan.innerHTML = "Cannot be zero";
         inputBill.style.border = "1.5px solid red";
     }
     else{
-        billError.innerHTML = "";
+        billSpan.innerHTML = "";
         inputBill.style.border = "1.5px solid green";
     }
 }
@@ -100,8 +97,8 @@ resetBtn.addEventListener("click", ()=>{
     inputBill.value = "";
     tipAmount.innerHTML = "Ksh 0.00";
     tipTotal.innerHTML = "Ksh 0.00";
-    billError.innerHTML = "";
-    peopleError.innerHTML = "";
+    billSpan.innerHTML = "";
+    peopleSpan.innerHTML = "";
     inputBill.style.border = "1.5px solid green";
     inputPeople.style.border = "1.5px solid green";
 });
